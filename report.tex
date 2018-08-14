@@ -1,0 +1,100 @@
+% LaTeX Template for Project Report, Version 1.0
+
+% Created by: Kakooza Allan Klaus
+% 216007552
+% CoCIS
+% Contact Info: kkallan07@gmail.com
+
+\documentclass[12pt, a4paper]{report}
+\usepackage{acronym}
+\usepackage[pdftex]{graphicx} %for embedding images
+\usepackage{url} %for proper url entries
+\usepackage[acronym]{glossaries}
+\usepackage{rotating}
+\usepackage{amssymb}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\usepackage{multido}
+\usepackage{amssymb}
+\usepackage{pifont}
+
+\newcommand{\Pointilles}[1]{%
+  \par\nobreak
+  \noindent\rule{0pt}{1.0\baselineskip}% Provides a larger gap between the preceding paragraph and the dots
+  \multido{}{#1}{\noindent\makebox[\linewidth]{\dotfill}\endgraf}% ... dotted lines ...
+  \bigskip% Gap between dots and next paragraph
+}
+
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+
+\usepackage{tabularx,ragged2e,booktabs,caption}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\newcommand{\quotes}[1]{``#1''}
+
+
+\begin{document}
+\renewcommand\bibname{References} %Renames "Bibliography" to "References" on ref page
+
+\pagenumbering{roman} %numbering before main content starts
+%Include first stuff: title, acknowledgement, dedication, tables, etc
+\input{tex/title.tex}
+\input{tex/declaration.tex}
+\input{tex/acknowledgement.tex}
+\input{tex/abstract.tex}
+
+% \tableofcontents
+% \input{./certificate.tex}
+% \input{./abstract.tex}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\input{tex/acronyms.tex}
+
+\newpage
+\pagenumbering{arabic} %reset numbering to normal for the main content
+
+% \input{./prob-definition.tex} %objective changed to problem definition
+
+\input{tex/introduction.tex} %literature survey included in this
+\input{tex/FieldAttachment.tex}
+\input{tex/Dicussion.tex}
+
+\input{tex/Conclusion.tex}
+
+
+% \input{./conclusion.tex}
+% \input{./acknow.tex}
+% \input{./ref.tex}
+%\input{./future-work.tex}
+
+%\bibliographystyle{plain}
+%\bibliography{references}
+
+\begin{thebibliography}{999}
+
+  \bibitem{Digital}
+  Digital Marketing Made Simple: A Step-by-Step Guide, 'Neil Patel'. [Online].
+  Available: \url{https://neilpatel.com/what-is-digital-marketing/}, 
+  [Accessed: June 08, 2018].
+  
+  \bibitem{chatbot}
+  Chatbot Development, 'Chatfuel dashboard'. [Online].
+  Available: \url{https://dashboard.chatfuel.com/}, 
+  [Accessed: June 18, 2018].
+  
+  
+  \bibitem{phone}
+	  Mobile Phone Repairing PDF Book Free Tutorial \& Guide, 'Mobile Phone Repairing', January 20,          	  2018. [Online].Available: \url{http://www.mobilecellphonerepairing.com/mobile-phone-repairing-		  pdf-book-free-tutorial-guide.html}, 
+  	  [Accessed: July 08, 2018].
+  
+ 
+\end{thebibliography}
+
+\input{tex/appendices.tex}
+
+\end{document}
